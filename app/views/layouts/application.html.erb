@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <head>
     <title>Uzduotis4</title>
     <%= csrf_meta_tags %>
@@ -10,6 +11,14 @@
   </head>
 
   <body>
+  <div class="w3-container">
+    <ul class="main-mav">
+      <li><%=link_to "Home", root_path%></li>
+      <li><%=link_to "Bikes", services_bikes_path%></li>
+      <li><%=link_to "Gear",services_gear_path%></li>
+      <li><%=link_to "Services",services_services_path%></li>
+    </ul>
+  </div>
     <%= yield %>
   </body>
 </html>
