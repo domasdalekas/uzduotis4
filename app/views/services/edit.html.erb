@@ -1,0 +1,8 @@
+
+<h1>Bikes</h1>
+<p>Edit</p>
+
+<%= form_for @bike, url:{action:"update"}, html:{class:"form"} do |s| %>
+  <%= render :partial => "form",:locals => {:f => s} %>
+  <%= s.submit("Edit") %>
+<%end %>

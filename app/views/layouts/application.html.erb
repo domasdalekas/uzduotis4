@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <head>
-    <title>Uzduotis4</title>
+    <title>Uzduotis6</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,8 +15,9 @@
     <ul class="main-mav">
       <li><%=link_to "Home", root_path%></li>
       <li><%=link_to "Bikes", services_bikes_path%></li>
-      <li><%=link_to "Gear",services_gear_path%></li>
+      <li><%=link_to "Add new bike",services_gear_path%></li>
       <li><%=link_to "Services",services_services_path%></li>
+
     </ul>
   </div>
     <%= yield %>

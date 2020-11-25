@@ -1,2 +1,18 @@
-<h1>Gear</h1>
-<p>Here you can find gear</p>
+<h1>Add bike</h1>
+
+<%= form_for @bike, url:{action:"create"},html: {class:"form"} do |s| %>
+
+
+  <P>
+    <%= s.label(:name) %>
+    <%= s.text_field :name %>
+  </P>
+  <P>
+    <%= s.label(:bikeType) %>
+    <%= s.text_field :bikeType %>
+  </P>
+  <P>
+    <%= s.submit "Create"%>
+  </P>
+
+<% end %>

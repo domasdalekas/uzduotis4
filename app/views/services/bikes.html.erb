@@ -1,3 +1,28 @@
 
 <h1>Bikes</h1>
 <p>Here you can find our bikes</p>
+
+
+<table border="1" cellspacing="0" cellpadding="0" width="90%">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Action</th>
+  </tr>
+  <% @bike.each do |s| %>
+  <tr>
+    <td><%= s.name %></td>
+    <td><%= s.bikeType %></td>
+    <td>
+      <%=
+        link_to "Edit", controller: :"services", action: "edit", id:s.id
+      %>
+    </td>
+    <td>
+      <%=
+        link_to "Delete", controller: :"services", action: "delete", id:s.id
+      %>
+    </td>
+  </tr>
+  <% end %>
+</table>
