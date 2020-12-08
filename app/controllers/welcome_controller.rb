@@ -1,8 +1,9 @@
-class WelcomeController < ApplicationController
+# frozen_string_literal: true
 
+class WelcomeController < ApplicationController
   def index
     user = User.new
-    end
+  end
 
   def show; end
 
@@ -20,7 +21,4 @@ class WelcomeController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
-
-
-
 end

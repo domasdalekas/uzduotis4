@@ -1,3 +1,6 @@
-class User < ApplicationRecord
+# frozen_string_literal: true
+
+class User < ActiveRecord::Base
   has_secure_password
+  validates :email, uniqueness: true
 end

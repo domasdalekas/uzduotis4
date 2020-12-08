@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# creates bikes to database
 class CreateBikes < ActiveRecord::Migration[6.0]
   def change
     create_table :bikes do |t|

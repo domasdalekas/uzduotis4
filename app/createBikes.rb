@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateBikes < ActiveRecord::Migration
   validates :name, presence: true
   def change

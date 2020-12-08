@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <head>
-    <title>Projektas</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Projektas</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
 
-  <div class="w3-container">
-    <ul class="main-mav">
-      <li><%=link_to "Home", root_path%></li>
-      <li><%=link_to "Bikes", services_bikes_path%></li>
-      <li><%=link_to "Add new bike",services_gear_path%></li>
-      <li><%=link_to "Services",services_services_path%></li>
-      <li><%=link_to "Register",welcome_registerScreen_path%></li>
 
-    </ul>
-  </div>
-    <%= yield %>
-  </body>
+<%= yield %>
+</body>
 </html>
