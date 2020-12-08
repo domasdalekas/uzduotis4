@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <head>
-    <title>Uzduotis6</title>
+    <title>Projektas</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,12 +11,14 @@
   </head>
 
   <body>
+
   <div class="w3-container">
     <ul class="main-mav">
       <li><%=link_to "Home", root_path%></li>
       <li><%=link_to "Bikes", services_bikes_path%></li>
       <li><%=link_to "Add new bike",services_gear_path%></li>
       <li><%=link_to "Services",services_services_path%></li>
+      <li><%=link_to "Register",welcome_registerScreen_path%></li>
 
     </ul>
   </div>

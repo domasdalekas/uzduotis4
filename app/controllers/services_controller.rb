@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
-  #before_action:load_image,only:[:gear,:bikes]
+  # before_action:load_image,only:[:gear,:bikes]
   def bikes
-    @bike = Bike.all #select * from bikes
+    @bike = Bike.all # select * from bikes
   end
 
   def gear
@@ -9,11 +9,9 @@ class ServicesController < ApplicationController
   end
 
   def create
-    @bike= Bike.new(bike_params)
+    @bike = Bike.new(bike_params)
     if @bike.save
-      redirect_to action:"bikes"
-    else
-      render action: "new"
+      redirect_to action:'bikes'
     end
   end
 
@@ -25,23 +23,24 @@ class ServicesController < ApplicationController
   def update
     @bike = Bike.find(params[:id])
     if @bike.update_attributes(bike_params)
-      redirect_to action:"bikes"
+      redirect_to action:'bikes'
 
     else
-      render action: "edit"
+      render action: 'edit'
     end
   end
 
   def delete
     @bike = Bike.find(params[:id])
     if @bike.destroy
-      redirect_to action:"bikes"
+      redirect_to action:'bikes'
 
     end
   end
 
   def bike_params
-    params.require(:bike).permit(:name,:bikeType)
+    params.require(:bike).permit(:name, :bikeType)
   end
+
 
 end

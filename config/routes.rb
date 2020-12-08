@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'services/:id/edit', :to => 'services#edit', :as => 'edit'
   get 'services/:id/delete', :to => 'services#delete', :as => 'delete'
+  get 'welcome/registerScreen'
   post 'create', to: 'services#create'
-  patch 'services/:id',:to =>'services#update'
+  patch 'services/:id', :to =>'services#update'
+  post 'create', to: 'services#createUser'
   root 'welcome#index'
+  post '/sessions' => 'sessions#create'
+  post '/welcome' => 'welcome#create'
+  get '/dashboard' => 'services#bikes'
 end
